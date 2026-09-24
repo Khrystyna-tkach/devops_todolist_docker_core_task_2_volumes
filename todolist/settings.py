@@ -67,8 +67,8 @@ DATABASES = {
         'NAME': 'app_db',
         'USER': 'app_user',
         'PASSWORD': '1234',
-        'HOST': '172.17.0.3',
-        'PORT': '',
+        'HOST': os.getenv('DB_HOST', 'mysql-todo'),
+        'PORT': os.getenv('DB_PORT', '3306'),
     }
 }
 
